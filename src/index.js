@@ -14,18 +14,18 @@ function calculateYearsDifference(fatherYears, sonYears) {
       case fatherYears / sonYears === 2: {
         return "The father is currently twice as old as the son.";
       }
-      case fatherYears / sonYears > 2: {
+      case fatherYears / sonYears < 2: {
         return `The father was twice as old as the son ${Math.abs(
           fatherYears - sonYears * 2
         )} years ago.`;
       }
-      case fatherYears / sonYears < 2: {
+      case fatherYears / sonYears > 2: {
         return `The father will be twice as old as the son in ${Math.abs(
           fatherYears - sonYears * 2
         )} years.`;
       }
       default: {
-        return "Invalid input detected";
+        return "Failed to count";
       }
     }
   }
